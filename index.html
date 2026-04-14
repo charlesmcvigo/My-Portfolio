@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,76 +17,93 @@
     />
   </head>
   <body>
-    <header>
-      <h1 id="title">[Your title or logo]</h1>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="resume">
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="View my resume"
-          >Resume</a
-        >
-      </div>
-    </header>
-
-    <main>
-      <section id="home">
-        <div class="home-img">
-          <img src="/images/Me-removebg-preview.png" alt="my-image" />
+    <div class="page-shell">
+      <header class="page-header">
+        <div class="brand">
+          <a id="brand-link" href="#home">C.VIGO</a>
+          <span id="brand-tagline">Developer & Designer</span>
         </div>
-        <div class="home-content">
-          <h2 id="my-name">I'm [Your Name]</h2>
-          <p id="my-intro">[Your brief introduction or tagline goes here.]</p>
-          <div class="socials">
-            <a
-              href="https://www.instagram.com/chaaa.rlss/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Visit my Instagram profile"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
 
-            <a
-              href="https://web.facebook.com/CharlesMcVigo"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Visit my Facebook profile"
-              ><i class="fa-brands fa-facebook"></i>
-            </a>
+        <button id="nav-toggle" class="icon-button nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
-            <a
-              href="https://www.linkedin.com/in/charles-mc-vigo-abb6a8363/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Visit my LinkedIn profile"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <div class="viber-contact">
-              <p>Message me through Viber:  <span id="viber-number">[Your Viber number here]</span></p>
+        <nav class="page-nav" aria-label="Primary navigation">
+          <ul id="nav-list"></ul>
+          <div class="nav-footer">
+            <a id="resume-link-mobile" class="button button-secondary nav-mobile-button" href="#" target="_blank" rel="noopener noreferrer">Resume</a>
+            <button id="theme-toggle-mobile" class="icon-button theme-toggle-btn" type="button" aria-label="Toggle theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <a id="resume-link" class="button button-secondary" href="#" target="_blank" rel="noopener noreferrer">Resume</a>
+          <button id="theme-toggle" class="icon-button theme-toggle-btn" type="button" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section id="home" class="section section-hero">
+          <div class="section-content grid grid-2 hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow">Welcome</span>
+              <h1 id="my-name">[Your Name]</h1>
+              <p id="my-intro" class="lead">[Your brief introduction or tagline goes here.]</p>
+
+              <div class="hero-actions"></div>
+
+              <div class="socials" id="social-links"></div>
+            </div>
+
+            <div class="hero-image">
+              <img src="images/Me-removebg-preview.png" alt="Profile image" />
             </div>
           </div>
-        </div>
-      </section>
-      <section id="about">
-        <!-- About -->
-      </section>
-      <section id="projects">
-        <!-- Projects -->
-      </section>
-      <section id="contact">
-        <!-- Contact -->
-      </section>
-    </main>
+        </section>
+
+        <section id="about" class="section section-about">
+          <div class="section-header">
+            <span class="section-number">01</span>
+            <h2>About Me</h2>
+          </div>
+          <div class="section-content" id="about-content"></div>
+        </section>
+
+        <section id="projects" class="section section-projects">
+          <div class="section-header">
+            <span class="section-number">02</span>
+            <h2>Projects</h2>
+          </div>
+          <div class="cards-grid" id="project-list"></div>
+        </section>
+
+        <section id="contact" class="section section-contact">
+          <div class="section-header">
+            <span class="section-number">03</span>
+            <h2>Contact</h2>
+          </div>
+          <div class="section-content contact-grid">
+            <div class="contact-copy">
+              <p class="lead">Interested in working together? Reach out using the details below or add a contact form here later.</p>
+              <ul class="contact-details">
+                <li><strong>Email:</strong> <a href="mailto:hello@example.com" id="contact-email">hello@example.com</a></li>
+                <li><strong>Phone:</strong> <span id="contact-phone">+639955093733</span></li>
+                <li><strong>Viber:</strong> <span id="viber-number">+639955093733</span></li>
+              </ul>
+            </div>
+            <div class="contact-card">
+              <h3>Let's build something</h3>
+              <p>Update this area with a contact form, newsletter signup, or appointment booking as your portfolio grows.</p>
+              <a class="button button-primary" href="mailto:hello@example.com" id="contact-mailto">Send Email</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <script src="script.js"></script>
   </body>
